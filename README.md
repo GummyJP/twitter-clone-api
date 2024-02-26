@@ -22,27 +22,21 @@ Tweets in the timeline and feed are displayed chronologically.
 
 Installation
 Clone the repository:
-
-Copy code
 git clone 
-Install dependencies:
 
-Copy code
+Install dependencies:
 cd twitter-clone-backend
 npm install
-Set up MySQL database:
 
-Create a MySQL database and configure the connection details in config/database.ts.
+Set up MySQL database:
+Create a MySQL database and configure the connection details in the .env file.
 
 Run Sequelize migrations to create database tables:
-
-Copy code
 npx sequelize-cli db:migrate
-Start the server:
 
-sql
-Copy code
-npm start
+Start the server:
+node dist/server.js
+
 Usage
 Sign Up: Register a new user by providing a unique username, email, and password.
 Log In: Log in with your username/email and password to authenticate.
@@ -50,11 +44,12 @@ Create Tweet: Authenticated users can create new tweets with the provided conten
 Tag Users: Tag other users in tweets by mentioning their usernames preceded by '@'.
 View Timeline: Access your timeline to see your tweets and the tweets you were tagged in.
 View Public Feed: Explore the public feed to see tweets from all users.
+
 Testing
 Unit tests are provided for critical functionalities such as authentication, tweet creation, and timeline/feed generation. Run the tests using the following command:
 
-Copy code
-npm test
+npx jest
+
 Technologies Used
 TypeScript
 Fastify
